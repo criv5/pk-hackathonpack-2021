@@ -85,7 +85,7 @@ public class Crush extends EarthAbility implements ComboAbility, AddonAbility {
 		
 		this.cooldown = ConfigManager.getConfig().getLong("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Cooldown");
 		this.damage = ConfigManager.getConfig().getDouble("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Damage");
-		this.detectRange = 4;
+		this.detectRange = ConfigManager.getConfig().getInt("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Range");
 		this.maxBfsLevel = ConfigManager.getConfig().getInt("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.MaximumDepth");
 		this.maxBlockCount = ConfigManager.getConfig().getInt("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.MaximumBlockAmount");
 		this.currentBlockCount = 0;
@@ -428,6 +428,7 @@ public class Crush extends EarthAbility implements ComboAbility, AddonAbility {
 		ConfigManager.getConfig().addDefault("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Enable", true);
 		ConfigManager.getConfig().addDefault("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Cooldown", 5000);
 		ConfigManager.getConfig().addDefault("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Damage", 3);
+		ConfigManager.getConfig().addDefault("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Range", 4);
 		ConfigManager.getConfig().addDefault("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.MaximumBlockAmount", 40);
 		ConfigManager.getConfig().addDefault("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.MaximumDepth", 30);
 		ConfigManager.getConfig().addDefault("ExtraAbilities.Hiro3.HackathonPack.Earth.Crush.Revert.Enable", true);
